@@ -1,1 +1,13 @@
 # VOIS-Major-Project
+Key Insights
+1. **Crop type, not season, is the dominant driver of yield.** ANOVA shows yield differences across seasons are *not* statistically significant (p ≈ 0.23), while yield varies by nearly 50× across crops (Sugarcane ≈ 47 t/ha vs Pulses ≈ 0.9 t/ha).
+2. **Season strongly affects profitability**, even though it barely affects yield. Average profit is highest in Kharif (≈ ₹1.79 lakh/farm), moderate in Rabi (≈ ₹0.88 lakh), and turns **negative** in Zaid (≈ −₹0.25 lakh) — a statistically significant difference (p < 0.0001).
+3. **Zaid (summer) season is loss-making for most crops and states.** Only Chilli, Sugarcane, and farms in Punjab/Karnataka/Madhya Pradesh stay profitable in Zaid; the rest turn negative.
+4. **Rice, Wheat and Maize run a structural loss in every season** in this dataset (margins from −79% to −128%), while **Chilli and Sugarcane are consistently the most profitable crops** (margins of 20–40% in every season).
+5. **Global outlier detection is misleading for this dataset.** 302 of 4,000 yield records look like statistical outliers under one dataset-wide IQR rule, but a per-crop check shows they are simply all Sugarcane farms — a genuinely high-yielding crop, not data errors.
+6. **Agronomic inputs show almost no correlation with yield.** Fertilizer, pesticide dose and seed quality score all have |r| < 0.06 with yield — even within individual crops — suggesting yield here is explained far more by crop choice and water-use efficiency (r ≈ 0.92) than by input intensity.
+7. **Drip irrigation is the most efficient and most profitable irrigation method** (highest yield and highest average profit), while **Flood irrigation consumes the most water for the lowest returns** — a clear inefficiency gap.
+8. **Disease/pest risk shows almost no measurable relationship with yield or profit** (r ≈ 0.01–0.07) — an unexpected pattern that is worth flagging as either effective pest management or a limitation of the risk metric itself.
+9. **Kharif carries the highest average disease/pest risk (≈ 54.5%) and highest rainfall (≈ 852 mm)**, consistent with monsoon-season humidity; **Zaid has the lowest of both (≈ 38.2% risk, ≈ 299 mm rainfall)**.
+10. **State performance rankings shift by season.** Gujarat and Tamil Nadu lead in Kharif but fall into losses in Zaid, while Punjab overtakes them in Zaid — a single "best state" ranking hides important seasonal reversals.
+11. **Missing data is small and evenly spread** (each affected column < 1.5% of records, proportionally distributed across seasons/crops) — consistent with data missing completely at random, supporting the median-imputation approach used in Section 4.
